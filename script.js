@@ -26,5 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>Votes:${animal.votes}</p>
         <button id="vote-btn">Vote</button>
 `;
+const voteButton = document.getElementById('vote-btn');
+    voteButton.addEventListener('click', () => {
+      animal.votes++;
+      renderAnimalDetails(animal);
+    });
+
+    animalDetailsContainer.style.display = 'block';
   }
 });
+
+
